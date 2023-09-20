@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentoria.io</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="src/favicon/brain-favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Mentoria</h1>
+        <p>Preencha o formulário abaixo para agendar sua mentoria</p>
+      </header>
+
+      <form id="book-form">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações pessoais</legend>
+            <div class="line" style="margin-top: 0.8rem"></div>
+            <div class="fullname-container">
+              <div class="input-wrapper">
+                <label for="input-name">Nome</label>
+                <input type="text" id="input-name" />
+              </div>
+              <div class="input-wrapper">
+                <label for="input-sname">Sobrenome</label>
+                <input type="text" id="input-sname" />
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="input-email">
+                Email<span>(digite um email válido).</span>
+              </label>
+              <input type="email" id="input-email" />
+            </div>
+            <div class="input-wrapper">
+              <label for="input-password">
+                Senha<span>(mínimo de 6 caracteres).</span>
+              </label>
+              <input type="password" id="input-password" minlength="6" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações do mentor(a)</legend>
+            <div class="line"></div>
+            <div class="input-wrapper">
+              <label for="input-mentor">
+                Nome do mentor(a)<span>(apenas primeiro nome).</span>
+              </label>
+              <input type="text" id="input-mentor" />
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="" id="" />
+              <label for="input-gender"> Prefiro uma mentora. </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Seus horários disponíveis</legend>
+            <div class="line"></div>
+            <div class="date-box">
+              <h2>Primeira mentoria</h2>
+              <div class="booking-date">
+                <div class="input-wrapper">
+                  <label for="input-date-1">
+                    Data<span>(DD/MM/AAAA)</span>
+                  </label>
+                  <input type="date" id="input-date-1" class="input-date" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="input-begin-1">
+                    Das<span>(HH:MM AM/PM)</span>
+                  </label>
+                  <input type="time" id="input-begin-1" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="input-end-1">
+                    Até<span>(HH:MM AM/PM)</span>
+                  </label>
+                  <input type="time" id="input-end-1" />
+                </div>
+              </div>
+            </div>
+            <div class="date-box">
+              <h2>Segunda mentoria</h2>
+              <div class="booking-date">
+                <div class="input-wrapper">
+                  <label for="input-date-2">
+                    Data<span>(DD/MM/AAAA)</span>
+                  </label>
+                  <input type="date" id="input-date-2" class="input-date" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="input-begin-2">
+                    Das<span>(HH:MM AM/PM)</span>
+                  </label>
+                  <input type="time" id="input-begin-2" />
+                </div>
+                <div class="input-wrapper">
+                  <label for="input-end-2">
+                    Até<span>(HH:MM AM/PM)</span>
+                  </label>
+                  <input type="time" id="input-end-2" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <footer>
+        <input
+          class="button-submit"
+          type="submit"
+          value="Salvar"
+          form="book-form"
+        />
+      </footer>
+    </div>
+  </body>
+</html>

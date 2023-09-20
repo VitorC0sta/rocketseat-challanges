@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap");
+
+:root {
+  --pixel10-to-rem1: 62.5%;
+  --rect: #535971;
+  --titles: #535971;
+  --labels: #4e4958;
+  --span-color: #c1bccc;
+  --span-color-hover: #9d9d9e;
+  --input-field-background: #fafafc;
+  --form-background: #ffffff;
+  --lines: #e6e6f0;
+  --body-background: #efefef;
+  --input-border: #e6e6f0;
+  --button-background: #ff5374;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--pixel10-to-rem1);
+}
+
+body {
+  background: var(--body-background);
+  font-family: "Poppins", sans-serif;
+  color: #4e4958;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+body::before {
+  content: "";
+  background: var(--rect);
+  height: 43.6rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.page h1,
+h2,
+legend,
+.button-submit {
+  font-family: "Staatliches", cursive;
+  font-weight: 400;
+}
+
+/* Início header */
+.page {
+  width: 75rem;
+  margin: 14rem auto 0;
+}
+
+header {
+  color: #ffffff;
+}
+
+header p {
+  font-size: 2rem;
+  margin-bottom: 5.8rem;
+}
+
+h1 {
+  font-size: 4.8rem;
+  margin-bottom: 1.8rem;
+}
+/* Fim header */
+
+/* Início Form */
+#book-form {
+  background: var(--form-background);
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+#book-form legend {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+#book-form fieldset {
+  border: none;
+}
+
+.line {
+  height: 0;
+  width: 100%;
+  border: solid 0.1rem var(--lines);
+  margin-bottom: 3.2rem;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.input-wrapper input {
+  font-family: "Poppins", sans-serif;
+  height: 5.6rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid var(--input-border);
+  background: var(--input-field-background);
+  padding-left: 0.8rem;
+}
+
+.fullname-container {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.fullname-container input {
+  width: 30rem;
+}
+
+.input-wrapper label {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.input-wrapper span {
+  color: var(--span-color);
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.input-wrapper span:hover {
+  color: var(--span-color-hover);
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  height: 2.4rem;
+  width: 2.4rem;
+  border: 0.1rem solid var(--input-border);
+  margin-right: 0.9rem;
+}
+
+.checkbox-wrapper input {
+  opacity: 0;
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cg clip-path='url(%23clip0_2402_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%23FF5374'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2402_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: solid 0.1rem black;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 3.4rem; /* 170% */
+}
+
+.booking-date {
+  display: flex;
+
+  gap: 1rem;
+}
+
+.input-date {
+  width: 30rem;
+  margin-right: 2.2rem;
+}
+
+footer {
+  height: 16rem;
+  margin-bottom: 36.6rem;
+  background-color: var(--rect);
+  border-radius: 0 0 0.8rem 0.8rem;
+  padding: 5.27rem 7.1rem;
+}
+
+footer .button-submit {
+  background-color: var(--button-background);
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.5rem 4rem;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2.6rem; /* 130% */
+}
