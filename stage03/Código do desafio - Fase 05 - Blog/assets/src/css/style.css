@@ -1,0 +1,175 @@
+:root {
+  font-size: var(--pixel-to-rem, 62.5%);
+
+  --color-blue-300: #387e96;
+  --color-blue-900: #065e7c;
+  --color-white: #ffffff;
+  --text-color: #121214;
+  --tittle-color: #202024;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+#app {
+  display: grid;
+  
+}
+.container {
+  padding: 0 2.2rem;
+}
+
+header {
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 2.55rem;
+  background-color: var(--color-blue-900);
+}
+
+header form {
+  flex: 1;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  border: none;
+  background-color: var(--color-blue-300);
+  color: var(--color-white);
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.6rem;
+}
+
+.input-wrapper input::placeholder,
+footer p {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+}
+
+header img {
+  object-fit: cover;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+}
+main h1,
+h2 {
+  font-size: 2.4rem;
+}
+
+main h1,
+h2,
+aside h3 {
+  font-weight: 700;
+  line-height: 160%;
+}
+
+main img {
+  width: 100%;
+}
+
+.main-tittle {
+  margin: 3rem 0;
+}
+
+.buttons-box {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: var(--color-blue-900);
+  border-radius: 50%;
+  border: none;
+}
+
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+aside li {
+  display: flex;
+  gap: 1.6rem;
+}
+
+aside li img {
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 15.1rem;
+  object-fit: cover;
+}
+
+aside h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.3rem;
+}
+
+footer {
+  margin-top: 4rem;
+  width: 100%;
+}
+footer p {
+  padding: 1.6rem;
+  text-align: center;
+  background-color: var(--color-blue-900);
+}
+
+@media (min-width: 770px) {
+  #app {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+    "a a a"
+    "b b c"
+    "b b c"
+    "d d d"
+  }
+
+  header {
+    grid-area: a;
+    margin-bottom: 4.4rem;
+  }
+
+  main {
+    grid-area: b;
+  }
+
+  aside{
+    grid-area: c;
+  }
+
+  footer {
+    grid-area: d;
+  }
+}
