@@ -1,0 +1,19 @@
+:root {
+    font-size: var(--pixel-to-rem, 62.5%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    margin-inline: auto;
+}
+
+.app {
+    max-width: 43rem;
+    border: 1px solid red;
+    height: 100%;
+}
