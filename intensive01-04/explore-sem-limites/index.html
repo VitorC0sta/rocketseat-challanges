@@ -1,53 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore sem limites</title>
-    <link rel="shortcut icon" href="src/favicon/galaxy-svgrepo-com.svg" type="image/x-icon">
-    <link rel="stylesheet" href="src/assets/css/style.css">
-</head>
-<body>
-    <div class="app">
-        <section class="hero">
-            <section class="hero-txt">
-                <h1>Explore sem limites</h1>
-                <p>Porque o aprendizado é contínuo</p>
-                <img src="" alt="">
-            </section>
-            <section class="hero-img">
-                <img src="" alt="">
-            </section>
+    <link
+      rel="shortcut icon"
+      href="src/assets/favicon/galaxy-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src/assets/css/style.css" />
+  </head>
+
+  <body>
+      <section class="hero">
+        <section class="hero-img">
+          <img
+            src="src/assets/images/astronaut.svg"
+            alt="imagem astronauta com planetas nas cores rosa, azul e amarlo"
+          />
         </section>
-        <section class="cards">
-            <section class="card">
-                <img src="" alt="">
-                <h3>Não pare nunca</h3>
-                <p>Se você deseja ter sucesso nos estudos, é fundamental que você adote uma mentalidade de "não pare nunca". Estudar de forma consistente e contínua é a chave para o progresso e a conquista de seus objetivos.</p>
-            </section>
-            <section class="card">
-                <img src="" alt="">
-                <h3></h3>
-                <p></p>
-            </section>
-            <section class="card">
-                <img src="" alt="">
-                <h3></h3>
-                <p></p>
-            </section>
+        <section class="hero-txt">
+          <h1>Explore sem limites</h1>
+          <p>Porque o aprendizado é contínuo</p>
+          <a href="#cards">
+            <img src="src/assets/images/arrow-down.svg"seta com uma borda oval
+            rosa." />
+          </a>
         </section>
-        <section class="contact-us">
-            <form action="">
-                <label for="name">Digite seu nome.</label>
-                <input type="text" id="name">
-                <label for="email">Digite seu email.</label>
-                <input type="email" id="email">
-                <label for="user-message">Escreva sua mensagem aqui.</label>
-                <textarea id="user-message" cols="30" rows="10"></textarea>    
-                <button>Enviar Mensagem</button>
-            </form>
+      </section>
+      <section class="cards">
+        <section class="card">
+          <img src="" alt="" />
+          <h3>Não pare nunca</h3>
+          <p>
+            Se você deseja ter sucesso nos estudos, é fundamental que você adote
+            uma mentalidade de "não pare nunca". Estudar de forma consistente e
+            contínua é a chave para o progresso e a conquista de seus objetivos.
+          </p>
         </section>
-        <footer>&copy; 2023 • Vitor Costa</footer>
-    </div>
-</body>
+        <section class="card">
+          <img src="" alt="" />
+          <h3>Só volta</h3>
+          <p>
+            Se você parou ou perdeu o ritmo em alguma atividade ou projeto,
+            saiba que nunca é tarde para recomeçar. Às vezes, as circunstâncias
+            podem mudar, ou podemos nos sentir desmotivados ou sobrecarregados.
+          </p>
+        </section>
+        <section class="card">
+          <img src="" alt="" />
+          <h3>Siga seu ritmo</h3>
+          <p>
+            Avançar pouco a pouco mantém progresso constante em objetivos,
+            evitando parar ou desistir. Mesmo pequenos passos nos aproximam do
+            destino e motivam a continuidade. Não subestime o poder de cada ação
+            rumo ao objetivo final.
+          </p>
+        </section>
+      </section>
+      <section class="contact-us">
+        <form action="">
+          <div class="input-wrapper">
+            <label class="sr-only" for="name">Digite seu nome.</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="input-wrapper">
+            <label class="sr-only" for="email">Digite seu email.</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="input-wrapper">
+            <label class="sr-only" for="user-message">Escreva sua mensagem aqui.</label>
+            <textarea id="user-message" cols="30" rows="10"></textarea>
+          </div>
+          <button>Enviar Mensagem</button>
+        </form>
+        <img
+          src="src/assets/images/stars.svg"
+          alt="estrelas rosas espalhadas pela tela com seu tamanho aumentando na vertical direita para baixo"
+          class="hidden"
+        />
+      </section>
+      <footer>&copy; 2023 • Vitor Costa</footer>
+
+  </body>
 </html>

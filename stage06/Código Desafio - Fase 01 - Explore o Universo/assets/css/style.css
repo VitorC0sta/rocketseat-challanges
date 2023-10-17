@@ -1,0 +1,30 @@
+* {
+  font-family: ;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --hue: 240;
+  --text-gray-100: hsla(var(--hue), 9%, 89%, 1);
+  --nav-gray-400: hsla(var(--hue), 58%, 1);
+  --nav-white: hsla(var(--hue), 0%, 100% ,1);
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  background: url(../images/mountains-universe-1.png) lightgray 50% / cover no-repeat;
+}
+ 
+#navbar {
+  padding: 7.2rem ;
+  margin: 1px;
+  
+}
+
+#nav-bar ul{
+  display: flex;
+}

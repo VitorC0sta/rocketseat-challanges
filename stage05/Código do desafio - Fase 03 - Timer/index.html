@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <link
+      rel="shortcut icon"
+      href="assets/favicon/timer.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <button class="toggle-mode">
+        <span class="sr-only">Modo claro ativo</span>
+        <i class="ph-bold ph-sun-dim"></i>
+        <i class="ph-bold ph-moon-stars"></i>
+    </button>
+
+    <section class="hero">
+      <section class="timer-container">
+        <div class="timer">
+          <span id="minutes">0</span>
+          <span>•</span>
+          <span id="seconds">0</span>
+        </div>
+        <div class="controls">
+          <button class="ph-bold ph-play" data-action="start">
+            <span class="sr-only">Iniciar.</span>
+          </button>
+          <button class="ph-bold ph-pause" data-action="pause">
+            <span class="sr-only">Parar.</span>
+          </button>
+          <button class="ph-bold ph-stop" data-action="stop">
+            <span class="sr-only">Zerar</span>
+          </button>
+          <button class="ph-bold ph-plus" data-action="addFive">
+            <span class="sr-only">Aumentar 5 minutos.</span>
+          </button>
+          <button class="ph-bold ph-minus" data-action="removeFive">
+            <span class="sr-only">Reduzir 5 minutos.</span>
+          </button>
+        </div>
+      </section>
+      <div class="background-sound-controls">
+        <div class="sound-card" id="sound-forest">
+          <button class="ph-bold ph-tree">
+            <span class="sr-only">Som de floresta.</span>
+          </button>
+        </div>
+        <div class="sound-card" id="sound-rain">
+          <button class="ph-bold ph-cloud-rain">
+            <span class="sr-only">Som de chuva.</span>
+          </button>
+        </div>
+        <div class="sound-card" id="sound-cooffe">
+          <button class="ph-bold ph-coffee">
+            <span class="sr-only">Som de cafeteria.</span>
+          </button>
+        </div>
+        <div class="sound-card" id="sound-campfire">
+          <button class="ph-bold ph-campfire">
+            <span class="sr-only">Som de fogueira</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>&copy; • Desenvolvido por Vitor Costa</footer>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

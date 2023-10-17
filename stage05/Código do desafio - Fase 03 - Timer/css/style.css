@@ -1,0 +1,174 @@
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62%);
+
+  --font: "JetBrains Mono", sans-serif;
+  --hue: 240;
+  --background-disabled: hsla(var(--hue), 9%, 89%, 1);
+  --text: hsla(var(--hue), 6%, 21%, 1);
+  --white: hsla(var(--hue), 1%, 100%, 1);
+  --button-rain: hsl(var(--hue), 100%,50%);
+  --button-fire: hsl(34, 100%, 50%);
+  --button-tree: hsl(125, 97%, 31%);
+  --button-coffee: hsl(27, 97%, 31%);
+
+  --dark-background: hsl(var(--hue),10% ,10%);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body,
+button {
+  color: var(--text);
+}
+
+.toggle-mode {
+    font-size: 4rem;
+    background-color: transparent;
+    border: none;
+}
+
+.toggle-mode {
+    position:absolute;
+    top:3.6rem;
+    right: 3.6rem;
+}
+
+.toggle-mode {
+    color: hsl(var(--hue), 70%, 69%);
+}
+
+.dark {
+    background: var(--dark-background);
+}
+
+.dark .toggle-mode .ph-sun-dim{
+    color: var(--button-fire);
+}
+
+.dark .timer span, .dark .ph-bold {
+    color: var(--white);
+}
+
+.dark .sound-card .ph-bold {
+    color: var(--dark-background);
+}
+
+.hero {
+  display: flex;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+  gap: 19.2rem;
+}
+
+.timer span {
+  text-align: center;
+  font-size: 12.6166rem;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+}
+
+.controls button {
+    font-size: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.background-sound-controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.sound-card button {
+    background: var(--background-disabled);
+    border-radius: 2rem;
+    border: none;
+    font-size: 6rem;
+    width: 13.8rem;
+    height: 15.2rem;
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.dark footer {
+    color: white;
+}
+
+/*Active Sounds*/
+.sound-card .active-fire {
+    color: white;
+    background-color: var(--button-fire);
+}
+
+.sound-card .active-rain {
+    color: white;
+    background-color: var(--button-rain);
+}
+
+.sound-card .active-forest {
+    color: white;
+    background-color: var(--button-tree);
+}
+
+.sound-card .active-coffe{
+    color: white;
+    background-color: var(--button-coffee);
+}
+
+/*Alteração dos botões*/
+.dark .ph-moon-stars,
+html:not(.dark) .ph-sun-dim,
+.running .ph-play,
+html:not(.running) .ph-pause{
+    display: none;
+}
+
+/*Blink pause*/
+html:not(.running) .hero  .timer span{
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+
+@keyframes blink{
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}

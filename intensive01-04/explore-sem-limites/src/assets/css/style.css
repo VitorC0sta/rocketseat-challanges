@@ -1,5 +1,12 @@
 :root {
-    font-size: var(--pixel-to-rem, 62.5%);
+    font-size: clamp(2vh, 2.5vh + 2%,62.5%);
+    --base-font: 'Mulish', sans-serif;
+
+    --white: #ffffff;
+    --light-gray: #f9f4fb;
+    --accent-color: #b52184;
+    --text-base-color: #312d64;
+    --gradient-background: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
 }
 
 * {
@@ -8,12 +15,74 @@
     box-sizing: border-box;
 }
 
+body, input, button, footer {
+    font-family: var(--base-font);
+    font-weight: 600;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+}
+
 .app {
     max-width: 43rem;
     border: 1px solid red;
-    height: 100vh;
+    height: 100%;
     display: grid;
-    place-content: center;
-    margin-inline: auto;
+    margin-inline: auto ;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 9.3rem;
+}
+
+.hero-img img {
+    width: 36.4rem;
+    height: 37rem;
+}
+
+.cards {
+    padding: 5.3rem 3.9rem;
+
+}
+
+.card {
+    padding: 2.65rem;
+}
+
+.hidden {
+    display: none;
+    width: 1;
+    height: 1;
+    overflow: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.contact-us form{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.contact-us form input {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+}
+
+footer {
+    text-align: center;
+}
