@@ -1,0 +1,35 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --hue: 240;
+  --text-gray-100: hsla(var(--hue), 9%, 89%, 1);
+  --nav-gray-400: hsla(var(--hue), 7%, 78%, 1);
+  --nav-white: hsla(var(--hue), 0%, 100%, 1);
+}
+
+.exploration #exploration-link{
+  font-weight: 700;
+  color: var(--nav-white);
+}
+
+#app {
+  padding: 6.3rem 10.2rem;
+}
+
+#app h1 {
+  margin-bottom: 1.6rem;
+}
+
+#app p {
+  width: 64.8rem;
+  font-size: 1.8rem;
+  ;
+  font-weight: 400;
+  line-height: 160%;
+}

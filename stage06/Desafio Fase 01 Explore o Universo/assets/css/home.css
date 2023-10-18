@@ -1,0 +1,42 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --hue: 240;
+  --text-gray-100: hsla(var(--hue), 9%, 89%, 1);
+  --nav-gray-400: hsla(var(--hue), 7%, 78%, 1);
+  --nav-white: hsla(var(--hue), 0%, 100%, 1);
+}
+
+.home #home-link{
+  font-weight: 700;
+  color: var(--nav-white);
+}
+
+.home #app {
+  display: grid;
+  padding: 6.3rem 10.2rem;
+  place-content: center;
+}
+
+
+
+.home #app #home-button{
+  margin: 2.4rem 10.2rem;
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--nav-white);
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
