@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-font: 'Roboto', sans-serif;
+  --hue: 194;
+  --table-components: hsl(var(--hue), 31%, 42%);
+  --main-row: hsla(var(--hue), 72%, 13%, 1);
+  --odd-row: hsla(var(--hue), 64%, 6%, 0.5);
+  --even-row: hsla(var(--hue), 65%, 7%, 1);
+  --button-color: hsla(var(--hue), 91%, 25%, 1);
+  --remove-color: hsla(355, 91%, 66%, 1);
+  --input-placeholder: hsla(var(--hue), 6%, 51%, 1);
+  --text-color: hsla(var(--hue), 9%, 89%, 1);
+}
+
+body {
+  background: #000;
+  font-size: 1.6rem;
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  display:flex;
+  max-width: 112rem;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#input-search {
+  width: 46.2rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--even-row);
+  border: none;
+}
+
+.search button {
+  padding: 1.2rem 3.2rem;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+.user-image{
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table thead td {
+  background: var(--main-row);
+  padding: 1.6rem  2.4rem 1.6rem 4rem;
+}
+
+table thead td:first-child {
+  border-top-left-radius: 0.6rem;
+}
+
+table thead td:last-child {
+  border-top-right-radius: 0.6rem;
+}
+
+tbody td {
+  padding: 2.4rem  2.4rem 2.4rem 4rem;
+  text-align: left;
+}
+
+tbody .users {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.users a {
+  text-decoration: none;
+}
+
+table tbody tr:nth-child(even) {
+  background: var(--even-row);
+}
+table tbody tr:nth-child(odd) {
+  background: var(--odd-row);
+}
+
+table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 0.6rem;
+}
+
+table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0.6rem;
+}
