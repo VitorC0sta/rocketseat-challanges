@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
   <meta charset="UTF-8">
@@ -9,52 +10,78 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
   <div id="app">
-  <header>
-    <img src="assets/images/git-fav.svg" alt="imagem com uma estrela entre chaves e ao seu lado escrito GitFav.">
-    <div class="search">
-      <label for="input-search" class="sr-only">Digite o Github username que quer favoritar</label>
-      <input type="text" id="input-search" placeholder="Digite o Github username que quer favoritar">
-      <button><i class="ph-bold ph-star"></i><span>FAVORITAR</span></button>
-    </div>
-  </header>
+    <header>
+      <img src="assets/images/git-fav.svg" alt="imagem com uma estrela entre chaves e ao seu lado escrito GitFav.">
+      <div class="search">
+        <label for="input-search" class="sr-only">Digite o Github username que quer favoritar</label>
+        <input type="text" id="input-search" placeholder="Digite o Github username que quer favoritar">
+        <button><i class="ph-bold ph-star"></i><span>FAVORITAR</span></button>
+      </div>
+    </header>
     <table>
       <thead>
         <tr>
-          <td>Usuário</td>
-          <td>Repositórios</td>
-          <td>Seguidores</td>
-          <td>Ação</td>
+          <th>Usuário</th>
+          <th>Repositórios</th>
+          <th>Seguidores</th>
+          <th>Ação</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="users">
-          <img  src="https://github.com/VitorC0sta.png" alt="Imagem de" class="user-image">
-          <a href="">
-            <p>Vitor Costa</p>
-            <span>/VitorC0sta</span>
-          </a>
-        </td>
-        <td class="repositories">123</td>
-        <td class="followers">1234</td>
-        <td class="remove">Remover</td>
-      </tr>
-      <tr>
-        <td class="users">
-          <img src="https://github.com/maykbrito.png" alt="" class="user-image">
-          <a href="">
-            <p>Mayk Brito</p>
-            <span>/maykbrito</span>
-          </a>
-        </td>
-        <td class="repositories">123</td>
-        <td class="followers">1234</td>
-        <td class="remove">Remover</td>
-      </tr>
-    </tbody>
-  </table>
+            <img src="https://github.com/VitorC0sta.png" alt="Imagem de" class="user-image">
+            <a href="">
+              <p>Vitor Costa</p>
+              <span>/VitorC0sta</span>
+            </a>
+          </td>
+          <td class="repositories">123</td>
+          <td class="followers">1234</td>
+          <td class="remove">Remover</td>
+        </tr>
+        <tr>
+          <td class="users">
+            <img src="https://github.com/maykbrito.png" alt="" class="user-image">
+            <a href="">
+              <p>Mayk Brito</p>
+              <span>/maykbrito</span>
+            </a>
+          </td>
+          <td class="repositories">123</td>
+          <td class="followers">1234</td>
+          <td class="remove">Remover</td>
+        </tr> 
+        <tr>
+          <td class="users">
+            <img src="https://github.com/maykbrito.png" alt="" class="user-image">
+            <a href="">
+              <p>Mayk Brito</p>
+              <span>/maykbrito</span>
+            </a>
+          </td>
+          <td class="repositories">123</td>
+          <td class="followers">1234</td>
+          <td class="remove">Remover</td>
+        </tr> 
+        <tr>
+          <td class="users">
+            <img src="https://github.com/maykbrito.png" alt="" class="user-image">
+            <a href="">
+              <p>Mayk Brito</p>
+              <span>/maykbrito</span>
+            </a>
+          </td>
+          <td class="repositories">123</td>
+          <td class="followers">1234</td>
+          <td class="remove">Remover</td>
+        </tr>        
+      </tbody>
+    </table>
   </div>
 </body>
+
 </html>
