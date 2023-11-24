@@ -1,12 +1,14 @@
 const { hash, compare } = require("bcryptjs");
 const AppError = require("../utils/AppError");
-const sqliteConnection = require("../database/sqlite");
+const knex = require("../database/knex");
+
 
 class UserController {
   async create (req, res) {
     const  { name, email, password } = req.body;
-    const database = await sqliteConnection();
-    const checkUserExists = await database.get("SELECT * FROM users WHERE email = (?)", [email]);
+    const [checkUserExists] = await knex("users").where("email", email).select("*");
+    
+    console.log(checkUserExists);
 
     if(checkUserExists) throw new AppError("User already registered.");
     
@@ -14,8 +16,10 @@ class UserController {
 
     const hashedPassword = await hash(password, 8);    
 
-    await database.run(`INSERT INTO users (name, email, password) VALUES(?, ?, ?)`,
-      [name, email, hashedPassword]
+    await knex("users").insert({
+      name,
+      email,
+      password: hashedPassword } 
     );
 
     return res.json({"message":"User Created"});
@@ -25,9 +29,8 @@ class UserController {
     const { id } = req.params;
     const { password } = req.body;
 
-    const database = await sqliteConnection();
  
-    const user = await database.get("SELECT * FROM users WHERE id = (?)", [id]);
+    const user = await knex("users").where("id", id).select("*") //database.get("SELECT * FROM users WHERE id = (?)", [id]);
     
     if(!password) throw new AppError("Please provide your password.")
 
@@ -35,7 +38,7 @@ class UserController {
     
     if(!validateUser) throw new AppError("Wrong Password");
     
-    const userView = await database.get("SELECT * FROM user_view WHERE email = (?)", [user.email]);
+    const userView = await knex("user_view").where("email", user.email).select("*");
     
     return res.json(userView);
   }
@@ -44,13 +47,17 @@ class UserController {
     const { name, password, new_password, avatar, email } = req.body;
     const { id } = req.params;
 
-    const database = await sqliteConnection();
-
-    const user = await database.get("SELECT * from users WHERE id = (?)", [id]);
+    const user = await knex("users").where("id", id).select("*").first(); 
 
     if(!user) throw new AppError("User not found");
     
-    const userEmailAlreadyUse = await database.get("SELECT * FROM users WHERE email = (?)", [email]);
+    console.log(user)
+    
+    user.name = name ?? user.name;
+    user.email = email ?? user.email;
+    user.avatar = avatar ?? user.avatar;
+   
+    const userEmailAlreadyUse = await knex("users").where("email", user.email).select("*").first();
 
     if(userEmailAlreadyUse && userEmailAlreadyUse.id !== user.id) throw new AppError("Email already in use.");
 
@@ -66,19 +73,15 @@ class UserController {
       user.password = await hash(new_password, 8);
     }
 
-    user.name = name ?? user.name;
-    user.email = email ?? user.email;
-    user.avatar = avatar ?? user.avatar;
-
-    await database.run(`
-      UPDATE users SET
-        name = ?,
-        email = ?,
-        password = ?,
-        avatar = ?,
-        updated_at = DATETIME('now')
-      WHERE id = ?`, 
-      [user.name, user.email, user.password, user.avatar, id]);
+    await knex("users")
+      .where("id", id)
+      .update({
+        name: user.name,
+        email: user.email,
+        password: user.password,
+        avatar: user.avatar,
+        updated_at: knex.fn.now()
+      });
 
     return res.json({"message": "User updated."});
   }
