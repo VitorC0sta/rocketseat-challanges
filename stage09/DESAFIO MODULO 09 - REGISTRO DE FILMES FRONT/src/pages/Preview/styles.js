@@ -1,16 +1,20 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
   
+  display: flex;
+  flex-direction: column;
+
+
   > h2 {
     font-size: 3.6rem;
     font-weight: 500;
   }
 
   > main {
-    max-width: 111.3rem;
+    flex: 1;
     overflow-y: auto;
     
     text-align: justify;
@@ -21,6 +25,15 @@ export const Container = styled.div`
     margin: 4rem 12.3rem;
     
     gap: 2rem;
+
+    > header {
+      margin-bottom: 2rem;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 2rem;
+    }
   }
 
 `;
@@ -51,4 +64,8 @@ export const CreatedAt = styled.div`
   > svg {
     color: ${({ theme }) => theme.COLORS.PINK};
   }
+`;
+
+export const Abstract = styled.div`
+  margin-top: 2rem;
 `;
